@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="324dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/slideshow"
+        app:srcCompat="@drawable/sample" />
+
+    <Button
+        android:id="@+id/backward"
+        android:layout_width="25dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/forward"
+        android:background="@null"
+        android:text="@string/forward"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/forward"
+        android:layout_width="25dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="113dp"
+        android:background="@null"
+        android:text="@string/backward"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/filename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/background_light"
+        android:text="@string/textview"
+        android:textColor="@android:color/background_dark" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/imageView">
+
+        <Spinner
+            android:id="@+id/tagSpinner"
+            android:layout_width="144dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/addTag" />
+
+        <Button
+            android:id="@+id/addTag"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/add_tag" />
+
+        <EditText
+            android:id="@+id/tagValue"
+            android:layout_width="126dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="106dp"
+            android:ems="10"
+            android:hint="@string/tag_value"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tagList"
+            android:layout_alignParentStart="true"
+            android:text="@string/list_of_tags"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <ListView
+            android:id="@+id/tagList"
+            android:layout_width="match_parent"
+            android:layout_height="117dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
